@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AA909DB2B4834ED00185061 /* ConnectHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909DA2B4834ED00185061 /* ConnectHubApp.swift */; };
+		3AA909DD2B4834ED00185061 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909DC2B4834ED00185061 /* ContentView.swift */; };
+		3AA909DF2B4834EE00185061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA909DE2B4834EE00185061 /* Assets.xcassets */; };
+		3AA909E22B4834EE00185061 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA909E12B4834EE00185061 /* Preview Assets.xcassets */; };
+		3AA909EC2B4834EE00185061 /* ConnectHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909EB2B4834EE00185061 /* ConnectHubTests.swift */; };
+		3AA909F62B4834EE00185061 /* ConnectHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909F52B4834EE00185061 /* ConnectHubUITests.swift */; };
+		3AA909F82B4834EE00185061 /* ConnectHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909F72B4834EE00185061 /* ConnectHubUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AA909E82B4834EE00185061 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AA909CF2B4834ED00185061 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AA909D62B4834ED00185061;
+			remoteInfo = ConnectHub;
+		};
+		3AA909F22B4834EE00185061 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AA909CF2B4834ED00185061 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AA909D62B4834ED00185061;
+			remoteInfo = ConnectHub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AA909D72B4834ED00185061 /* ConnectHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA909DA2B4834ED00185061 /* ConnectHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectHubApp.swift; sourceTree = "<group>"; };
+		3AA909DC2B4834ED00185061 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3AA909DE2B4834EE00185061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AA909E12B4834EE00185061 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3AA909E72B4834EE00185061 /* ConnectHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA909EB2B4834EE00185061 /* ConnectHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectHubTests.swift; sourceTree = "<group>"; };
+		3AA909F12B4834EE00185061 /* ConnectHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA909F52B4834EE00185061 /* ConnectHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectHubUITests.swift; sourceTree = "<group>"; };
+		3AA909F72B4834EE00185061 /* ConnectHubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectHubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AA909D42B4834ED00185061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA909E42B4834EE00185061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA909EE2B4834EE00185061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AA909CE2B4834ED00185061 = {
+			isa = PBXGroup;
+			children = (
+				3AA909D92B4834ED00185061 /* ConnectHub */,
+				3AA909EA2B4834EE00185061 /* ConnectHubTests */,
+				3AA909F42B4834EE00185061 /* ConnectHubUITests */,
+				3AA909D82B4834ED00185061 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AA909D82B4834ED00185061 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AA909D72B4834ED00185061 /* ConnectHub.app */,
+				3AA909E72B4834EE00185061 /* ConnectHubTests.xctest */,
+				3AA909F12B4834EE00185061 /* ConnectHubUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AA909D92B4834ED00185061 /* ConnectHub */ = {
+			isa = PBXGroup;
+			children = (
+				3AA909DA2B4834ED00185061 /* ConnectHubApp.swift */,
+				3AA909DC2B4834ED00185061 /* ContentView.swift */,
+				3AA909DE2B4834EE00185061 /* Assets.xcassets */,
+				3AA909E02B4834EE00185061 /* Preview Content */,
+			);
+			path = ConnectHub;
+			sourceTree = "<group>";
+		};
+		3AA909E02B4834EE00185061 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3AA909E12B4834EE00185061 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AA909EA2B4834EE00185061 /* ConnectHubTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AA909EB2B4834EE00185061 /* ConnectHubTests.swift */,
+			);
+			path = ConnectHubTests;
+			sourceTree = "<group>";
+		};
+		3AA909F42B4834EE00185061 /* ConnectHubUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3AA909F52B4834EE00185061 /* ConnectHubUITests.swift */,
+				3AA909F72B4834EE00185061 /* ConnectHubUITestsLaunchTests.swift */,
+			);
+			path = ConnectHubUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AA909D62B4834ED00185061 /* ConnectHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA909FB2B4834EE00185061 /* Build configuration list for PBXNativeTarget "ConnectHub" */;
+			buildPhases = (
+				3AA909D32B4834ED00185061 /* Sources */,
+				3AA909D42B4834ED00185061 /* Frameworks */,
+				3AA909D52B4834ED00185061 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConnectHub;
+			productName = ConnectHub;
+			productReference = 3AA909D72B4834ED00185061 /* ConnectHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AA909E62B4834EE00185061 /* ConnectHubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA909FE2B4834EE00185061 /* Build configuration list for PBXNativeTarget "ConnectHubTests" */;
+			buildPhases = (
+				3AA909E32B4834EE00185061 /* Sources */,
+				3AA909E42B4834EE00185061 /* Frameworks */,
+				3AA909E52B4834EE00185061 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AA909E92B4834EE00185061 /* PBXTargetDependency */,
+			);
+			name = ConnectHubTests;
+			productName = ConnectHubTests;
+			productReference = 3AA909E72B4834EE00185061 /* ConnectHubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3AA909F02B4834EE00185061 /* ConnectHubUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA90A012B4834EE00185061 /* Build configuration list for PBXNativeTarget "ConnectHubUITests" */;
+			buildPhases = (
+				3AA909ED2B4834EE00185061 /* Sources */,
+				3AA909EE2B4834EE00185061 /* Frameworks */,
+				3AA909EF2B4834EE00185061 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AA909F32B4834EE00185061 /* PBXTargetDependency */,
+			);
+			name = ConnectHubUITests;
+			productName = ConnectHubUITests;
+			productReference = 3AA909F12B4834EE00185061 /* ConnectHubUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AA909CF2B4834ED00185061 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3AA909D62B4834ED00185061 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					3AA909E62B4834EE00185061 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 3AA909D62B4834ED00185061;
+					};
+					3AA909F02B4834EE00185061 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 3AA909D62B4834ED00185061;
+					};
+				};
+			};
+			buildConfigurationList = 3AA909D22B4834ED00185061 /* Build configuration list for PBXProject "ConnectHub" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AA909CE2B4834ED00185061;
+			productRefGroup = 3AA909D82B4834ED00185061 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AA909D62B4834ED00185061 /* ConnectHub */,
+				3AA909E62B4834EE00185061 /* ConnectHubTests */,
+				3AA909F02B4834EE00185061 /* ConnectHubUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AA909D52B4834ED00185061 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA909E22B4834EE00185061 /* Preview Assets.xcassets in Resources */,
+				3AA909DF2B4834EE00185061 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA909E52B4834EE00185061 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA909EF2B4834EE00185061 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AA909D32B4834ED00185061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA909DD2B4834ED00185061 /* ContentView.swift in Sources */,
+				3AA909DB2B4834ED00185061 /* ConnectHubApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA909E32B4834EE00185061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA909EC2B4834EE00185061 /* ConnectHubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA909ED2B4834EE00185061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA909F62B4834EE00185061 /* ConnectHubUITests.swift in Sources */,
+				3AA909F82B4834EE00185061 /* ConnectHubUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AA909E92B4834EE00185061 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AA909D62B4834ED00185061 /* ConnectHub */;
+			targetProxy = 3AA909E82B4834EE00185061 /* PBXContainerItemProxy */;
+		};
+		3AA909F32B4834EE00185061 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AA909D62B4834ED00185061 /* ConnectHub */;
+			targetProxy = 3AA909F22B4834EE00185061 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3AA909F92B4834EE00185061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AA909FA2B4834EE00185061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AA909FC2B4834EE00185061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ConnectHub/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.chrizers.ConnectHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AA909FD2B4834EE00185061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ConnectHub/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.chrizers.ConnectHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3AA909FF2B4834EE00185061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.chrizers.ConnectHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectHub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConnectHub";
+			};
+			name = Debug;
+		};
+		3AA90A002B4834EE00185061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.chrizers.ConnectHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectHub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConnectHub";
+			};
+			name = Release;
+		};
+		3AA90A022B4834EE00185061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.chrizers.ConnectHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ConnectHub;
+			};
+			name = Debug;
+		};
+		3AA90A032B4834EE00185061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.chrizers.ConnectHubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ConnectHub;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AA909D22B4834ED00185061 /* Build configuration list for PBXProject "ConnectHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA909F92B4834EE00185061 /* Debug */,
+				3AA909FA2B4834EE00185061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA909FB2B4834EE00185061 /* Build configuration list for PBXNativeTarget "ConnectHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA909FC2B4834EE00185061 /* Debug */,
+				3AA909FD2B4834EE00185061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA909FE2B4834EE00185061 /* Build configuration list for PBXNativeTarget "ConnectHubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA909FF2B4834EE00185061 /* Debug */,
+				3AA90A002B4834EE00185061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA90A012B4834EE00185061 /* Build configuration list for PBXNativeTarget "ConnectHubUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA90A022B4834EE00185061 /* Debug */,
+				3AA90A032B4834EE00185061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AA909CF2B4834ED00185061 /* Project object */;
+}
