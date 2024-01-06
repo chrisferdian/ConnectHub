@@ -52,8 +52,9 @@ struct PostListView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Picker("User", selection: $presenter.user) {
                         ForEach(users, id: \.self) {
-                            Text($0.username)
+                            Text($0.username.usernameFormat)
                                 .foregroundColor(.white)
+                                .font(.system(size: 14, weight: .medium))
                         }
                     }
                     .pickerStyle(.menu)

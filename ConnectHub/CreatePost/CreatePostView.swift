@@ -162,5 +162,5 @@ struct CreatePostView: View {
 }
 
 #Preview {
-    CreatePostView.build(user: UserModel(username: "Steve Jobs", profilePicture: "steve"))
+    CreatePostView.build(user: UserModel(name: "Steve Jobs", username: "steve", profilePicture: "steve"))
 }

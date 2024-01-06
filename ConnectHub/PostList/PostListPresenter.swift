@@ -13,7 +13,7 @@ class PostListPresenter: ObservableObject {
     var router: PostListRouter
     var postData: PostData
 
-    @Published var user: UserModel = UserModel(username: "Steve Jobs", profilePicture: "steve")
+    @Published var user: UserModel = UserModel(name: "Steve Jobs", username: "steve", profilePicture: "steve")
     @Published var path = NavigationPath()
 
     init(interactor: PostListInteractor? = nil, router: PostListRouter, postData: PostData) {
@@ -30,6 +30,6 @@ class PostListPresenter: ObservableObject {
         path.append(router.navigateToPostForm())
     }
     func backToRoot() {
-        path.removeLast()
+        path.removeLast(path.count)
     }
 }

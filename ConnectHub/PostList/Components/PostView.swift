@@ -98,8 +98,11 @@ struct PostView: View {
                     .cornerRadius(100)
                     .contentShape(Circle())
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(post.user.username)
+                    Text(post.user.name)
                         .font(.system(size: 14, weight: .bold))
+                        .foregroundColor(Color(red: 0.92, green: 0.92, blue: 0.93))
+                    Text(post.user.username.usernameFormat)
+                        .font(.system(size: 14, weight: .medium))
                         .foregroundColor(Color(red: 0.92, green: 0.92, blue: 0.93))
                 }
                 .padding(0)
@@ -116,12 +119,16 @@ struct PostView: View {
         .frame(maxWidth: .infinity, alignment: .center)
     }
 }
-
+extension String {
+    var usernameFormat: String {
+        return String(format: "@%@", self).lowercased()
+    }
+}
 #Preview {
     PostView(post: PostEntity(
-        user: .init(username: "Steve", profilePicture: "steve"),
+        user: .init(name: "Steve Jobs", username: "steve", profilePicture: "steve"),
         text: loremIpsum,
-        imageURL: "flag.and.flag.filled.crossed")
+        imageURL: "img1")
     )
     .background(Color.black)
 }
