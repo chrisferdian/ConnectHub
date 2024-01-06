@@ -11,20 +11,20 @@ class PostListPresenter: ObservableObject {
     
     weak var interactor: PostListInteractor?
     var router: PostListRouter
-    
-    @Published
-    var posts: [PostEntity] = []
-    @Published
-    var user: UserModel = UserModel(username: "Steve Jobs", profilePicture: "steve")
+    var postData: PostData
 
+    @Published var user: UserModel = UserModel(username: "Steve Jobs", profilePicture: "steve")
     @Published var path = NavigationPath()
 
-    init(interactor: PostListInteractor, router: PostListRouter) {
+    init(interactor: PostListInteractor? = nil, router: PostListRouter, postData: PostData) {
         self.interactor = interactor
         self.router = router
+        self.postData = postData
+        self.user = user
+        self.path = path
     }
     func addData(post: PostEntity) {
-        posts.insert(post, at: 0)
+        postData.posts.insert(post, at: 0)
     }
     func navigateToCreatePost() {
         path.append(router.navigateToPostForm())

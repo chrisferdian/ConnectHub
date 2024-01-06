@@ -20,7 +20,7 @@ struct CreatePostView: View {
     
     @State var isSelectionIconMode: Bool = false
     @EnvironmentObject
-    var listPresenter: PostListPresenter
+    var postData: PostData
     @Environment(\.presentationMode)
     var presentationMode: Binding<PresentationMode>
 
@@ -54,7 +54,7 @@ struct CreatePostView: View {
             })
             if let imageName = presenter.imageName {
                 ZStack(alignment: .bottom) {
-                    Image(systemName: imageName)
+                    Image(imageName)
                         .resizable()
                         .frame(height: 300)
                         .foregroundColor(.white)
@@ -92,7 +92,7 @@ struct CreatePostView: View {
                     if isSelectionIconMode {
                         HStack(alignment: .center, spacing: 16) {
                             ForEach(ImageOptionsName, id: \.self) { option in
-                                Image(systemName: option)
+                                Image(option)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .foregroundColor(.white)
@@ -129,8 +129,8 @@ struct CreatePostView: View {
                         text: presenter.text,
                         imageURL: presenter.imageName
                     )
-                    listPresenter.addData(post: entity)
-                    listPresenter.backToRoot()
+                    postData.posts.insert(entity, at: 0)
+                    self.presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Publish")
                         .font(.system(size: 14, weight: .medium))

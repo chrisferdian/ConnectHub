@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "025423900_1680761637-pexels-johannes-plenio-1435075_1_.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

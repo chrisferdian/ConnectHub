@@ -41,3 +41,7 @@ struct PostEntity {
         self.imageURL = imageURL
     }
 }
+
+class PostData: ObservableObject {
+    @Published var posts: [PostEntity] = []
+}

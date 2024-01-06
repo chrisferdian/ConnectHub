@@ -8,11 +8,10 @@
 import Foundation
 
 let ImageOptionsName = [
-    "bolt",
-    "photo",
-    "icloud.fill",
-    "fan.badge.automatic.fill",
-    "car.rear.waves.up.fill"
+    "img1",
+    "img2",
+    "img3",
+    "img4"
 ]
 
 struct CreatePostEntity {

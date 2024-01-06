@@ -17,49 +17,36 @@ struct PostView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     profileInfoWrapper
                         .padding(.horizontal, 16)
-
                     if let imageName = post.imageURL {
-                        Rectangle()
-                          .foregroundColor(.clear)
-                          .frame(height: 180)
-                          .background(
-                            Image(systemName: imageName)
-                              .resizable()
-                              .aspectRatio(contentMode: .fill)
-                              .frame(width: 327, height: 180)
-                              .foregroundColor(.white)
-                              .clipped()
-                          )
-                          .cornerRadius(16)
+                        Image(imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 180)
+                            .foregroundColor(.white)
+                            .clipped()
+                            .cornerRadius(16)
                     }
                     
-                    if let _text = post.text {
-                        Text(_text)
+                    if let text = post.text {
+                        Text(text)
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(Color(red: 0.92, green: 0.92, blue: 0.93))
+                            .foregroundColor(Color(white: 0.92))
                             .frame(maxWidth: .infinity, alignment: .topLeading)
                             .padding(.horizontal, 16)
                     }
-
                     postActionWrapper
                         .padding(.horizontal, 16)
                     
                     Divider()
                         .background(.gray)
                 }
-                .padding(0)
-//                .frame(width: .infinity, alignment: .leading)
             }
-            .padding(0)
-            .frame(maxWidth: .infinity, alignment: .center)
         }
-        .padding(0)
         .background(.black)
-//        .frame(width: .infinity, alignment: .center)
     }
     var postActionWrapper: some View {
         HStack(alignment: .center) {
-            HStack(alignment: .center, spacing: 20) { 
+            HStack(alignment: .center, spacing: 20) {
                 //MARK: LIKE
                 HStack(alignment: .center, spacing: 8) {
                     Image(systemName: "hand.thumbsup")
@@ -95,9 +82,6 @@ struct PostView: View {
             }
             .padding(0)
             Spacer()
-            Image(systemName:"bookmark")
-                .frame(width: 20, height: 20)
-                .foregroundColor(.white)
         }
         .padding(0)
         .padding(.bottom, 16)
@@ -112,16 +96,11 @@ struct PostView: View {
                     .frame(width: 32, height: 32)
                     .clipped()
                     .cornerRadius(100)
-                    .contentShape(Circle())    // <- Here!
-
+                    .contentShape(Circle())
                 VStack(alignment: .leading, spacing: 2) {
                     Text(post.user.username)
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(Color(red: 0.92, green: 0.92, blue: 0.93))
-                    
-                    Text("1d ago")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(Color(red: 0.45, green: 0.46, blue: 0.47))
                 }
                 .padding(0)
             }

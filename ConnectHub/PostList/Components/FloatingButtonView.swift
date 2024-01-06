@@ -19,6 +19,7 @@ struct FloatingButtonView: View {
             Image(systemName: "plus")
                 .font(.title.weight(.semibold))
                 .padding()
+                .foregroundColor(.white)
                 .background(
                     LinearGradient(
                         stops: [
@@ -29,7 +30,6 @@ struct FloatingButtonView: View {
                         endPoint: UnitPoint(x: 1.03, y: 0.5)
                     )
                 )
-                .foregroundColor(.white)
                 .clipShape(Circle())
                 .shadow(radius: 4, x: 0, y: 4)
         }
