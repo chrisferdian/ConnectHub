@@ -6,9 +6,13 @@
 //
 
 import Foundation
+// Helper class for providing data related functionalities.
 class ConnectHelper {
+    
+    // Singleton instance for shared access to ConnectHelper functionalities.
     static var shared = ConnectHelper()
     
+    // Asynchronously retrieves dummy user data for testing.
     func getUsers() async -> [UserModel] {
         return [
             UserModel(name: "Steve Jobs", username: "steve", profilePicture: "steve"),

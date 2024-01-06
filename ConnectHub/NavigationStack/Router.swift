@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+// Enumeration representing different routes within the app.
 enum AppRoute: Hashable {
+    // Route for the post list view.
     case postList
+    // Route for the create post view.
     case createPost
 }
