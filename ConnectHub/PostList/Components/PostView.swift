@@ -21,7 +21,7 @@ struct PostView: View {
                     if let imageName = post.imageURL {
                         Rectangle()
                           .foregroundColor(.clear)
-                          .frame(width: .infinity, height: 180)
+                          .frame(height: 180)
                           .background(
                             Image(systemName: imageName)
                               .resizable()
@@ -48,14 +48,14 @@ struct PostView: View {
                         .background(.gray)
                 }
                 .padding(0)
-                .frame(width: .infinity, alignment: .leading)
+//                .frame(width: .infinity, alignment: .leading)
             }
             .padding(0)
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .padding(0)
         .background(.black)
-        .frame(width: .infinity, alignment: .center)
+//        .frame(width: .infinity, alignment: .center)
     }
     var postActionWrapper: some View {
         HStack(alignment: .center) {
@@ -94,14 +94,13 @@ struct PostView: View {
                 .padding(0)
             }
             .padding(0)
-            Image("bookmark")
+            Spacer()
+            Image(systemName:"bookmark")
                 .frame(width: 20, height: 20)
                 .foregroundColor(.white)
-            Spacer()
         }
         .padding(0)
         .padding(.bottom, 16)
-        .frame(width: .infinity, alignment: .center)
     }
     var profileInfoWrapper: some View {
         HStack(alignment: .center) {

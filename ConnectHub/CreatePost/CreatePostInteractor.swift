@@ -6,3 +6,7 @@
 //
 
 import Foundation
+// Interactor
+class CreatePostInteractor {
+    weak var presenter: CreatePostPresenter?
+}

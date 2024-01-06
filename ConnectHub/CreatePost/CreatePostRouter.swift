@@ -6,3 +6,7 @@
 //
 
 import Foundation
+// Router
+protocol CreatePostRouterProtocol: AnyObject {}
+
+class CreatePostRouter: CreatePostRouterProtocol {}

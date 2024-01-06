@@ -29,4 +29,7 @@ class PostListPresenter: ObservableObject {
     func navigateToCreatePost() {
         path.append(router.navigateToPostForm())
     }
+    func backToRoot() {
+        path.removeLast()
+    }
 }

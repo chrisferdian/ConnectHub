@@ -7,12 +7,22 @@
 
 import SwiftUI
 
-struct CreatePostPresenter: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class CreatePostPresenter: ObservableObject {
+    weak var interactor: CreatePostInteractor?
+    var router: CreatePostRouter
+    
+    @Published
+    var user: UserModel
+    @Published var text: String = ""
+    @Published var imageName: String?
+    
+    init(interactor: CreatePostInteractor? = nil, router: CreatePostRouter, user: UserModel) {
+        self.interactor = interactor
+        self.router = router
+        self.user = user
     }
-}
-
-#Preview {
-    CreatePostPresenter()
+//    init(interactor: CreatePostInteractor? = nil, router: CreatePostRouter) {
+//        self.interactor = interactor
+//        self.router = router
+//    }
 }

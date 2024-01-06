@@ -41,7 +41,8 @@ struct PostListView: View {
                 })
                 .padding()
                 .navigationDestination(for: AppRoute.self) { routes in
-                    CreatePostView()
+                    CreatePostView.build(user: presenter.user)
+                        .environmentObject(presenter)
                 }
             })
             .background(Color.black)
