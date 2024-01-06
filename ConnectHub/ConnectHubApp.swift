@@ -15,6 +15,7 @@ struct ConnectHubApp: App {
     var body: some Scene {
         WindowGroup {
             PostListView.build()
+//            RouterView(content: PostListView.build)
         }
     }
 }

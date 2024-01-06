@@ -5,12 +5,15 @@
 //  Created by Indo Teknologi Utama on 05/01/24.
 //
 
-import Foundation
+import SwiftUI
+
 // Router
 protocol PostListRouterProtocol: AnyObject {
-    func navigateToPostForm()
+    func navigateToPostForm() -> AppRoute
 }
 class PostListRouter: PostListRouterProtocol {
-    // Implement navigation logic
-    func navigateToPostForm() {}
+    
+    func navigateToPostForm() -> AppRoute {
+        return .createPost
+    }
 }

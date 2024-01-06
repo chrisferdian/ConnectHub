@@ -13,16 +13,17 @@ extension PostListView {
         let interactor = PostListInteractor()
         let presenter = PostListPresenter(interactor: interactor, router: router)
         interactor.presenter = presenter
-        return PostListView(presenter: presenter)
+        let view = PostListView(presenter: presenter)
+        return view
     }
 }
 
 struct PostListView: View {
     @ObservedObject
     var presenter: PostListPresenter
-    
+
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $presenter.path) {
             ZStack(alignment: .bottomTrailing, content: {
                 VStack(content: {
                     List(presenter.posts, id: \.id) { post in
@@ -36,13 +37,12 @@ struct PostListView: View {
                 })
                 
                 FloatingButtonView(action: {
-                    presenter.addData(post: PostEntity(
-                        user: presenter.user,
-                        text: loremIpsum,
-                        imageURL: nil)
-                    )
+                    presenter.navigateToCreatePost()
                 })
                 .padding()
+                .navigationDestination(for: AppRoute.self) { routes in
+                    CreatePostView()
+                }
             })
             .background(Color.black)
             .navigationTitle("Connect Hub")

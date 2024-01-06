@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3AA909DB2B4834ED00185061 /* ConnectHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909DA2B4834ED00185061 /* ConnectHubApp.swift */; };
-		3AA909DD2B4834ED00185061 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909DC2B4834ED00185061 /* ContentView.swift */; };
 		3AA909DF2B4834EE00185061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA909DE2B4834EE00185061 /* Assets.xcassets */; };
 		3AA909E22B4834EE00185061 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA909E12B4834EE00185061 /* Preview Assets.xcassets */; };
 		3AA909EC2B4834EE00185061 /* ConnectHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA909EB2B4834EE00185061 /* ConnectHubTests.swift */; };
@@ -21,6 +20,12 @@
 		3AA90A0E2B48370400185061 /* PostListEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A0D2B48370400185061 /* PostListEntities.swift */; };
 		3AA90A112B48449400185061 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A102B48449400185061 /* PostView.swift */; };
 		3AA90A132B4859C900185061 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A122B4859C900185061 /* FloatingButtonView.swift */; };
+		3AA90A162B48DE5800185061 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A152B48DE5800185061 /* CreatePostView.swift */; };
+		3AA90A182B48DE6300185061 /* CreatePostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A172B48DE6300185061 /* CreatePostInteractor.swift */; };
+		3AA90A1A2B48DE6C00185061 /* CreatePostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A192B48DE6C00185061 /* CreatePostPresenter.swift */; };
+		3AA90A1C2B48DE7700185061 /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A1B2B48DE7700185061 /* CreatePostRouter.swift */; };
+		3AA90A1E2B48DE8B00185061 /* CreatePostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A1D2B48DE8B00185061 /* CreatePostEntity.swift */; };
+		3AA90A232B48F39B00185061 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A222B48F39B00185061 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +48,6 @@
 /* Begin PBXFileReference section */
 		3AA909D72B4834ED00185061 /* ConnectHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA909DA2B4834ED00185061 /* ConnectHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectHubApp.swift; sourceTree = "<group>"; };
-		3AA909DC2B4834ED00185061 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AA909DE2B4834EE00185061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA909E12B4834EE00185061 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AA909E72B4834EE00185061 /* ConnectHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +62,12 @@
 		3AA90A0D2B48370400185061 /* PostListEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListEntities.swift; sourceTree = "<group>"; };
 		3AA90A102B48449400185061 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		3AA90A122B4859C900185061 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
+		3AA90A152B48DE5800185061 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		3AA90A172B48DE6300185061 /* CreatePostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractor.swift; sourceTree = "<group>"; };
+		3AA90A192B48DE6C00185061 /* CreatePostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenter.swift; sourceTree = "<group>"; };
+		3AA90A1B2B48DE7700185061 /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
+		3AA90A1D2B48DE8B00185061 /* CreatePostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntity.swift; sourceTree = "<group>"; };
+		3AA90A222B48F39B00185061 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +118,10 @@
 		3AA909D92B4834ED00185061 /* ConnectHub */ = {
 			isa = PBXGroup;
 			children = (
+				3AA90A1F2B48F37300185061 /* NavigationStack */,
+				3AA90A142B48DE4200185061 /* CreatePost */,
 				3AA90A042B48369D00185061 /* PostList */,
 				3AA909DA2B4834ED00185061 /* ConnectHubApp.swift */,
-				3AA909DC2B4834ED00185061 /* ContentView.swift */,
 				3AA909DE2B4834EE00185061 /* Assets.xcassets */,
 				3AA909E02B4834EE00185061 /* Preview Content */,
 			);
@@ -162,6 +173,26 @@
 				3AA90A122B4859C900185061 /* FloatingButtonView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3AA90A142B48DE4200185061 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				3AA90A152B48DE5800185061 /* CreatePostView.swift */,
+				3AA90A172B48DE6300185061 /* CreatePostInteractor.swift */,
+				3AA90A192B48DE6C00185061 /* CreatePostPresenter.swift */,
+				3AA90A1D2B48DE8B00185061 /* CreatePostEntity.swift */,
+				3AA90A1B2B48DE7700185061 /* CreatePostRouter.swift */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		3AA90A1F2B48F37300185061 /* NavigationStack */ = {
+			isa = PBXGroup;
+			children = (
+				3AA90A222B48F39B00185061 /* Router.swift */,
+			);
+			path = NavigationStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,11 +327,16 @@
 			files = (
 				3AA90A132B4859C900185061 /* FloatingButtonView.swift in Sources */,
 				3AA90A0E2B48370400185061 /* PostListEntities.swift in Sources */,
+				3AA90A182B48DE6300185061 /* CreatePostInteractor.swift in Sources */,
+				3AA90A1A2B48DE6C00185061 /* CreatePostPresenter.swift in Sources */,
+				3AA90A1C2B48DE7700185061 /* CreatePostRouter.swift in Sources */,
 				3AA90A0A2B4836D400185061 /* PostListInteractor.swift in Sources */,
 				3AA90A112B48449400185061 /* PostView.swift in Sources */,
+				3AA90A232B48F39B00185061 /* Router.swift in Sources */,
 				3AA90A082B4836C200185061 /* PostListPresenter.swift in Sources */,
-				3AA909DD2B4834ED00185061 /* ContentView.swift in Sources */,
+				3AA90A162B48DE5800185061 /* CreatePostView.swift in Sources */,
 				3AA90A062B4836AC00185061 /* PostListView.swift in Sources */,
+				3AA90A1E2B48DE8B00185061 /* CreatePostEntity.swift in Sources */,
 				3AA90A0C2B4836E200185061 /* PostListRouter.swift in Sources */,
 				3AA909DB2B4834ED00185061 /* ConnectHubApp.swift in Sources */,
 			);
