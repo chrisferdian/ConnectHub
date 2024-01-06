@@ -18,12 +18,11 @@ struct CreatePostView: View {
     @StateObject
     var presenter: CreatePostPresenter
     
-    @State var isSelectionIconMode: Bool = false
     @EnvironmentObject
     var postData: PostData
     @Environment(\.presentationMode)
     var presentationMode: Binding<PresentationMode>
-
+    
     var body: some View {
         VStack(alignment: .leading,content: {
             HStack(alignment: .top,content: {
@@ -76,7 +75,7 @@ struct CreatePostView: View {
             } else {
                 HStack(alignment: .center, spacing: 12, content: {
                     HStack(alignment: .center, spacing: 10) {
-                        Image(systemName: !isSelectionIconMode ? "plus" : "xmark")
+                        Image(systemName: !presenter.isSelectionIconMode ? "plus" : "xmark")
                             .frame(width: 30, height: 30)
                             .foregroundColor(.white)
                     }
@@ -86,10 +85,10 @@ struct CreatePostView: View {
                     .padding(.leading)
                     .onTapGesture {
                         withAnimation {
-                            isSelectionIconMode.toggle()
+                            presenter.isSelectionIconMode.toggle()
                         }
                     }
-                    if isSelectionIconMode {
+                    if presenter.isSelectionIconMode {
                         HStack(alignment: .center, spacing: 16) {
                             ForEach(ImageOptionsName, id: \.self) { option in
                                 Image(option)
@@ -97,7 +96,7 @@ struct CreatePostView: View {
                                     .frame(width: 30, height: 30)
                                     .foregroundColor(.white)
                                     .onTapGesture {
-                                        isSelectionIconMode.toggle()
+                                        presenter.isSelectionIconMode.toggle()
                                         presenter.imageName = option
                                     }
                             }
@@ -146,18 +145,19 @@ struct CreatePostView: View {
     var isFormFilled: Bool {
         return !presenter.text.isEmpty || presenter.imageName != nil
     }
-    var btnBack : some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-    }) {
-        HStack {
-            Image(systemName: "chevron.backward") // set image here
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(.white)
-            Text("Discard")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.white)
+    var btnBack : some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.backward") // set image here
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white)
+                Text("Discard")
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(.white)
+            }
         }
-    }
     }
 }
 

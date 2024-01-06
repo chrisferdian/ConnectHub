@@ -9,14 +9,18 @@ import SwiftUI
 
 struct PostView: View {
     
+    // The post entity being displayed.
     @State var post: PostEntity
     
     var body: some View {
         VStack(alignment: .center, spacing: 24) {
+            // Main content of the post view.
             VStack(alignment: .center, spacing: 16) {
                 VStack(alignment: .leading, spacing: 16) {
                     profileInfoWrapper
                         .padding(.horizontal, 16)
+                    
+                    // Display post image if available.
                     if let imageName = post.imageURL {
                         Image(imageName)
                             .resizable()
@@ -27,6 +31,7 @@ struct PostView: View {
                             .cornerRadius(16)
                     }
                     
+                    // Display post text if available.
                     if let text = post.text {
                         Text(text)
                             .font(.system(size: 16, weight: .medium))
@@ -34,6 +39,8 @@ struct PostView: View {
                             .frame(maxWidth: .infinity, alignment: .topLeading)
                             .padding(.horizontal, 16)
                     }
+                    
+                    // Display post actions (like, comment, share).
                     postActionWrapper
                         .padding(.horizontal, 16)
                     
@@ -44,10 +51,12 @@ struct PostView: View {
         }
         .background(.black)
     }
+    
+    // View for displaying post actions (like, comment, share).
     var postActionWrapper: some View {
         HStack(alignment: .center) {
             HStack(alignment: .center, spacing: 20) {
-                //MARK: LIKE
+                // Like action.
                 HStack(alignment: .center, spacing: 8) {
                     Image(systemName: "hand.thumbsup")
                         .frame(width: 16, height: 16)
@@ -58,7 +67,7 @@ struct PostView: View {
                 }
                 .padding(0)
                 
-                //MARK: COMMENTS
+                // Comment action.
                 HStack(alignment: .center, spacing: 8) {
                     Image(systemName: "ellipsis.message")
                         .frame(width: 16, height: 16)
@@ -69,7 +78,7 @@ struct PostView: View {
                 }
                 .padding(0)
                 
-                //MARK: SHARE
+                // Share action.
                 HStack(alignment: .center, spacing: 8) {
                     Image(systemName: "square.and.arrow.up")
                         .frame(width: 16, height: 16)
@@ -86,9 +95,12 @@ struct PostView: View {
         .padding(0)
         .padding(.bottom, 16)
     }
+    
+    // View for displaying user profile information.
     var profileInfoWrapper: some View {
         HStack(alignment: .center) {
             HStack(alignment: .center, spacing: 8) {
+                // User profile picture.
                 Image(post.user.profilePicture)
                     .resizable()
                     .background(Color.gray)
@@ -97,6 +109,8 @@ struct PostView: View {
                     .clipped()
                     .cornerRadius(100)
                     .contentShape(Circle())
+                
+                // User name and username.
                 VStack(alignment: .leading, spacing: 2) {
                     Text(post.user.name)
                         .font(.system(size: 14, weight: .bold))
@@ -109,6 +123,8 @@ struct PostView: View {
             }
             .padding(0)
             Spacer()
+            
+            // Ellipsis for additional actions.
             Image(systemName: "ellipsis")
                 .frame(width: 24, height: 24)
                 .rotationEffect(.init(degrees: 90))
@@ -119,11 +135,7 @@ struct PostView: View {
         .frame(maxWidth: .infinity, alignment: .center)
     }
 }
-extension String {
-    var usernameFormat: String {
-        return String(format: "@%@", self).lowercased()
-    }
-}
+
 #Preview {
     PostView(post: PostEntity(
         user: .init(name: "Steve Jobs", username: "steve", profilePicture: "steve"),

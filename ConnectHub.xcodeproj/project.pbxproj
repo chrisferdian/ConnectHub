@@ -26,6 +26,11 @@
 		3AA90A1C2B48DE7700185061 /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A1B2B48DE7700185061 /* CreatePostRouter.swift */; };
 		3AA90A1E2B48DE8B00185061 /* CreatePostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A1D2B48DE8B00185061 /* CreatePostEntity.swift */; };
 		3AA90A232B48F39B00185061 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A222B48F39B00185061 /* Router.swift */; };
+		3AA90A262B49782100185061 /* ConnectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A252B49782100185061 /* ConnectHelper.swift */; };
+		3AA90A282B49932700185061 /* Dummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A272B49932700185061 /* Dummies.swift */; };
+		3AA90A2B2B49936800185061 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A2A2B49936800185061 /* UserModel.swift */; };
+		3AA90A2D2B49939900185061 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A2C2B49939900185061 /* PostEntity.swift */; };
+		3AA90A2F2B4994A500185061 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA90A2E2B4994A500185061 /* Extension+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		3AA90A1B2B48DE7700185061 /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
 		3AA90A1D2B48DE8B00185061 /* CreatePostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntity.swift; sourceTree = "<group>"; };
 		3AA90A222B48F39B00185061 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3AA90A252B49782100185061 /* ConnectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectHelper.swift; sourceTree = "<group>"; };
+		3AA90A272B49932700185061 /* Dummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummies.swift; sourceTree = "<group>"; };
+		3AA90A2A2B49936800185061 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3AA90A2C2B49939900185061 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
+		3AA90A2E2B4994A500185061 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,8 @@
 		3AA909D92B4834ED00185061 /* ConnectHub */ = {
 			isa = PBXGroup;
 			children = (
+				3AA90A292B49935700185061 /* Models */,
+				3AA90A242B49781300185061 /* Helpers */,
 				3AA90A1F2B48F37300185061 /* NavigationStack */,
 				3AA90A142B48DE4200185061 /* CreatePost */,
 				3AA90A042B48369D00185061 /* PostList */,
@@ -193,6 +205,25 @@
 				3AA90A222B48F39B00185061 /* Router.swift */,
 			);
 			path = NavigationStack;
+			sourceTree = "<group>";
+		};
+		3AA90A242B49781300185061 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3AA90A252B49782100185061 /* ConnectHelper.swift */,
+				3AA90A272B49932700185061 /* Dummies.swift */,
+				3AA90A2E2B4994A500185061 /* Extension+String.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3AA90A292B49935700185061 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AA90A2A2B49936800185061 /* UserModel.swift */,
+				3AA90A2C2B49939900185061 /* PostEntity.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,17 +358,22 @@
 			files = (
 				3AA90A132B4859C900185061 /* FloatingButtonView.swift in Sources */,
 				3AA90A0E2B48370400185061 /* PostListEntities.swift in Sources */,
+				3AA90A262B49782100185061 /* ConnectHelper.swift in Sources */,
 				3AA90A182B48DE6300185061 /* CreatePostInteractor.swift in Sources */,
 				3AA90A1A2B48DE6C00185061 /* CreatePostPresenter.swift in Sources */,
+				3AA90A2F2B4994A500185061 /* Extension+String.swift in Sources */,
 				3AA90A1C2B48DE7700185061 /* CreatePostRouter.swift in Sources */,
 				3AA90A0A2B4836D400185061 /* PostListInteractor.swift in Sources */,
 				3AA90A112B48449400185061 /* PostView.swift in Sources */,
+				3AA90A2B2B49936800185061 /* UserModel.swift in Sources */,
 				3AA90A232B48F39B00185061 /* Router.swift in Sources */,
 				3AA90A082B4836C200185061 /* PostListPresenter.swift in Sources */,
 				3AA90A162B48DE5800185061 /* CreatePostView.swift in Sources */,
 				3AA90A062B4836AC00185061 /* PostListView.swift in Sources */,
+				3AA90A282B49932700185061 /* Dummies.swift in Sources */,
 				3AA90A1E2B48DE8B00185061 /* CreatePostEntity.swift in Sources */,
 				3AA90A0C2B4836E200185061 /* PostListRouter.swift in Sources */,
+				3AA90A2D2B49939900185061 /* PostEntity.swift in Sources */,
 				3AA909DB2B4834ED00185061 /* ConnectHubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

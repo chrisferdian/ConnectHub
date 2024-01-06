@@ -16,6 +16,8 @@ class CreatePostPresenter: ObservableObject {
     @Published var text: String = ""
     @Published var imageName: String?
     
+    @Published var isSelectionIconMode: Bool = false
+    
     init(interactor: CreatePostInteractor? = nil, router: CreatePostRouter, user: UserModel) {
         self.interactor = interactor
         self.router = router

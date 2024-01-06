@@ -9,11 +9,12 @@ import SwiftUI
 
 struct FloatingButtonView: View {
     
+    // Closure for the action to be performed when the button is tapped.
     var action: (()-> Void)?
     
     var body: some View {
         Button {
-            // Action
+            // Perform the action if it's provided.
             action?()
         } label: {
             Image(systemName: "plus")
