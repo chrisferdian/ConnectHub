@@ -5,21 +5,25 @@
 //  Created by Indo Teknologi Utama on 05/01/24.
 //
 
-import Foundation
+import SwiftUI
 
 class PostListPresenter: ObservableObject {
-    var interactor: PostListInteractor
+    
+    weak var interactor: PostListInteractor?
     var router: PostListRouterProtocol
-    @Published var posts: [PostEntity] = []
+    
+    @Published
+    var posts: [PostEntity] = []
+    @Published
+    var user: UserModel = UserModel(username: "Steve Jobs", profilePicture: "steve")
+    @State
+    var selectedUserIndex = 0
 
-    init(interactor: PostListInteractor!, router: PostListRouterProtocol!) {
+    init(interactor: PostListInteractor, router: PostListRouterProtocol) {
         self.interactor = interactor
         self.router = router
     }
     func addData(post: PostEntity) {
         posts.insert(post, at: 0)
-    }
-    func fetchPosts() {
-        
     }
 }

@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+extension PostListView {
+    static func build() -> PostListView {
+        let router = PostListRouter()
+        let interactor = PostListInteractor()
+        let presenter = PostListPresenter(interactor: interactor, router: router)
+        interactor.presenter = presenter
+        return PostListView(presenter: presenter)
+    }
+}
+
 struct PostListView: View {
     @ObservedObject
     var presenter: PostListPresenter
-    let users = ["Steve", "Bill"]
-    @State private var selection = "Steve"
     
     var body: some View {
         NavigationStack {
@@ -28,7 +36,11 @@ struct PostListView: View {
                 })
                 
                 FloatingButtonView(action: {
-                    presenter.addData(post: .init(username: selection, text: loremIpsum, imageURL: selection == "Steve" ? "arcade.stick.console.fill" : nil))
+                    presenter.addData(post: PostEntity(
+                        user: presenter.user,
+                        text: loremIpsum,
+                        imageURL: nil)
+                    )
                 })
                 .padding()
             })
@@ -37,13 +49,14 @@ struct PostListView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Picker("Select a user", selection: $selection) {
+                    Picker("User", selection: $presenter.user) {
                         ForEach(users, id: \.self) {
-                            Text($0)
+                            Text($0.username)
                                 .foregroundColor(.white)
                         }
                     }
                     .pickerStyle(.menu)
+                    .accentColor(.white)
                 }
             }
         }

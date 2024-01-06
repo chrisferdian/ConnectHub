@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ConnectHubApp: App {
+    
+    let user = UserModel(username: "Steve Jobs", profilePicture: "steve")
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PostListView.build()
         }
     }
 }

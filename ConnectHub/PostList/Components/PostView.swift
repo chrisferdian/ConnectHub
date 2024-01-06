@@ -65,7 +65,7 @@ struct PostView: View {
                     Image(systemName: "hand.thumbsup")
                         .frame(width: 16, height: 16)
                         .foregroundColor(.white)
-                    Text("2,245")
+                    Text(post.likes.description)
                         .font(.system(size: 12, weight: .semibold))
                         .foregroundColor(.white)
                 }
@@ -76,7 +76,7 @@ struct PostView: View {
                     Image(systemName: "ellipsis.message")
                         .frame(width: 16, height: 16)
                         .foregroundColor(.white)
-                    Text("2,245")
+                    Text(post.comments.description)
                         .font(.system(size: 12, weight: .semibold))
                         .foregroundColor(.white)
                 }
@@ -87,7 +87,7 @@ struct PostView: View {
                     Image(systemName: "square.and.arrow.up")
                         .frame(width: 16, height: 16)
                         .foregroundColor(.white)
-                    Text("2,245")
+                    Text(post.shares.description)
                         .font(.system(size: 12, weight: .semibold))
                         .foregroundColor(.white)
                 }
@@ -106,7 +106,7 @@ struct PostView: View {
     var profileInfoWrapper: some View {
         HStack(alignment: .center) {
             HStack(alignment: .center, spacing: 8) {
-                Image("steve")
+                Image(post.user.profilePicture)
                     .resizable()
                     .background(Color.gray)
                     .aspectRatio(contentMode: .fit)
@@ -116,7 +116,7 @@ struct PostView: View {
                     .contentShape(Circle())    // <- Here!
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(post.username)
+                    Text(post.user.username)
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(Color(red: 0.92, green: 0.92, blue: 0.93))
                     
@@ -140,6 +140,10 @@ struct PostView: View {
 }
 
 #Preview {
-    PostView(post: .init(username: "", text: "", imageURL: "flag.and.flag.filled.crossed"))
-        .background(Color.black)
+    PostView(post: PostEntity(
+        user: .init(username: "Steve", profilePicture: "steve"),
+        text: loremIpsum,
+        imageURL: "flag.and.flag.filled.crossed")
+    )
+    .background(Color.black)
 }

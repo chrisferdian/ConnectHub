@@ -8,6 +8,5 @@
 import Foundation
 // Interactor
 class PostListInteractor {
-    
-    func fetchPosts() {}
+    weak var presenter: PostListPresenter?
 }
